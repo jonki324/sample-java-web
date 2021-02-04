@@ -10,7 +10,6 @@ import javax.ws.rs.core.Application;
 public class TodoApplication extends Application {
   @Override
   public Set<Class<?>> getClasses() {
-    System.out.println("ok");
     Set<Class<?>> classes = new HashSet<Class<?>>();
     classes.add(TodoResource.class);
     return classes;
