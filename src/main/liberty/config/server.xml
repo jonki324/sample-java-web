@@ -17,4 +17,16 @@
 	<!-- Default SSL configuration enables trust for default certificates from 
 		the Java runtime -->
 	<ssl id="defaultSSLConfig" trustDefaultCerts="true" />
+
+	<library id="jdbcLib">
+		<fileset dir="jdbc" includes="*.jar"/>
+	</library>
+
+	<!-- Datasource Configuration -->
+	<dataSource id="todojpadatasource"
+		jndiName="jdbc/todojpadatasource">
+		<jdbcDriver libraryRef="jdbcLib" />
+		<properties.derby.embedded
+			databaseName="tododb" createDatabase="create" />
+	</dataSource>
 </server>
