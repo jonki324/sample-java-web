@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.List;
+
 import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -23,5 +25,10 @@ public class TodoDao {
 	
 	public void delete(TodoDto todo) {
 		em.remove(todo);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<TodoDto> readAll() {
+		return em.createNativeQuery("select * from todos", TodoDto.class).getResultList();
 	}
 }
