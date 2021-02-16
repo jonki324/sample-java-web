@@ -42,9 +42,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.derby</groupId>
-			<artifactId>derby</artifactId>
-			<version>10.15.2.0</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.18</version>
 		</dependency>
 	</dependencies>
 
@@ -58,9 +58,9 @@
 				<configuration>
 					<copyDependencies>
 						<dependency>
-							<groupId>org.apache.derby</groupId>
-							<artifactId>derby</artifactId>
-							<version>10.15.2.0</version>
+							<groupId>org.postgresql</groupId>
+							<artifactId>postgresql</artifactId>
+							<version>42.2.18</version>
 						</dependency>
 						<location>jdbc</location>
 					</copyDependencies>
